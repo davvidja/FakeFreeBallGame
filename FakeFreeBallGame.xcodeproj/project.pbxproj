@@ -7,31 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		921268601A2B440E007DFD1C /* GameApplicationLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9250E20A1A29E3C4006B70D8 /* GameApplicationLayer.framework */; };
-		921268611A2B440E007DFD1C /* GameApplicationLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9250E20A1A29E3C4006B70D8 /* GameApplicationLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9250E1B01A29D9D7006B70D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9250E1AF1A29D9D7006B70D8 /* AppDelegate.swift */; };
 		9250E1B21A29D9D7006B70D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9250E1B11A29D9D7006B70D8 /* ViewController.swift */; };
 		9250E1B51A29D9D7006B70D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9250E1B31A29D9D7006B70D8 /* Main.storyboard */; };
 		9250E1B71A29D9D7006B70D8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9250E1B61A29D9D7006B70D8 /* Images.xcassets */; };
 		9250E1BA1A29D9D7006B70D8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9250E1B81A29D9D7006B70D8 /* LaunchScreen.xib */; };
 		9250E1C61A29D9D7006B70D8 /* FakeFreeBallGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9250E1C51A29D9D7006B70D8 /* FakeFreeBallGameTests.swift */; };
+		9254D7D01A2BD6880097FBF6 /* GameApplicationLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9254D7CD1A2BD6390097FBF6 /* GameApplicationLayer.framework */; };
+		9254D7D11A2BD6880097FBF6 /* GameApplicationLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9254D7CD1A2BD6390097FBF6 /* GameApplicationLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9212685D1A2B43F3007DFD1C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9250E2041A29E3C4006B70D8 /* GameApplicationLayer.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9250E1E71A29E3AD006B70D8;
-			remoteInfo = GameApplicationLayer;
-		};
-		921268621A2B440E007DFD1C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9250E2041A29E3C4006B70D8 /* GameApplicationLayer.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9250E1E71A29E3AD006B70D8;
-			remoteInfo = GameApplicationLayer;
-		};
 		9250E1C01A29D9D7006B70D8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9250E1A21A29D9D7006B70D8 /* Project object */;
@@ -39,19 +25,26 @@
 			remoteGlobalIDString = 9250E1A91A29D9D7006B70D8;
 			remoteInfo = FakeFreeBallGame;
 		};
-		9250E2091A29E3C4006B70D8 /* PBXContainerItemProxy */ = {
+		9254D7CC1A2BD6390097FBF6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9250E2041A29E3C4006B70D8 /* GameApplicationLayer.xcodeproj */;
+			containerPortal = 9254D7C71A2BD6370097FBF6 /* GameApplicationLayer.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9250E1E81A29E3AD006B70D8;
 			remoteInfo = GameApplicationLayer;
 		};
-		9250E20B1A29E3C4006B70D8 /* PBXContainerItemProxy */ = {
+		9254D7CE1A2BD6390097FBF6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9250E2041A29E3C4006B70D8 /* GameApplicationLayer.xcodeproj */;
+			containerPortal = 9254D7C71A2BD6370097FBF6 /* GameApplicationLayer.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9250E1F31A29E3AE006B70D8;
 			remoteInfo = GameApplicationLayerTests;
+		};
+		9254D7D21A2BD6880097FBF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9254D7C71A2BD6370097FBF6 /* GameApplicationLayer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9250E1E71A29E3AD006B70D8;
+			remoteInfo = GameApplicationLayer;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -62,7 +55,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				921268611A2B440E007DFD1C /* GameApplicationLayer.framework in Embed Frameworks */,
+				9254D7D11A2BD6880097FBF6 /* GameApplicationLayer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,7 +73,7 @@
 		9250E1BF1A29D9D7006B70D8 /* FakeFreeBallGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FakeFreeBallGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9250E1C41A29D9D7006B70D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9250E1C51A29D9D7006B70D8 /* FakeFreeBallGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeFreeBallGameTests.swift; sourceTree = "<group>"; };
-		9250E2041A29E3C4006B70D8 /* GameApplicationLayer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GameApplicationLayer.xcodeproj; path = ../GameApplicationLayer/GameApplicationLayer.xcodeproj; sourceTree = "<group>"; };
+		9254D7C71A2BD6370097FBF6 /* GameApplicationLayer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GameApplicationLayer.xcodeproj; path = GameApplicationLayer/GameApplicationLayer.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				921268601A2B440E007DFD1C /* GameApplicationLayer.framework in Frameworks */,
+				9254D7D01A2BD6880097FBF6 /* GameApplicationLayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +101,7 @@
 				9250E1AC1A29D9D7006B70D8 /* FakeFreeBallGame */,
 				9250E1C21A29D9D7006B70D8 /* FakeFreeBallGameTests */,
 				9250E1AB1A29D9D7006B70D8 /* Products */,
-				9250E2041A29E3C4006B70D8 /* GameApplicationLayer.xcodeproj */,
+				9254D7C71A2BD6370097FBF6 /* GameApplicationLayer.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,11 +152,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9250E2051A29E3C4006B70D8 /* Products */ = {
+		9254D7C81A2BD6370097FBF6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9250E20A1A29E3C4006B70D8 /* GameApplicationLayer.framework */,
-				9250E20C1A29E3C4006B70D8 /* GameApplicationLayerTests.xctest */,
+				9254D7CD1A2BD6390097FBF6 /* GameApplicationLayer.framework */,
+				9254D7CF1A2BD6390097FBF6 /* GameApplicationLayerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,8 +176,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				9212685E1A2B43F3007DFD1C /* PBXTargetDependency */,
-				921268631A2B440E007DFD1C /* PBXTargetDependency */,
+				9254D7D31A2BD6880097FBF6 /* PBXTargetDependency */,
 			);
 			name = FakeFreeBallGame;
 			productName = FakeFreeBallGame;
@@ -240,8 +232,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 9250E2051A29E3C4006B70D8 /* Products */;
-					ProjectRef = 9250E2041A29E3C4006B70D8 /* GameApplicationLayer.xcodeproj */;
+					ProductGroup = 9254D7C81A2BD6370097FBF6 /* Products */;
+					ProjectRef = 9254D7C71A2BD6370097FBF6 /* GameApplicationLayer.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -253,18 +245,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		9250E20A1A29E3C4006B70D8 /* GameApplicationLayer.framework */ = {
+		9254D7CD1A2BD6390097FBF6 /* GameApplicationLayer.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = GameApplicationLayer.framework;
-			remoteRef = 9250E2091A29E3C4006B70D8 /* PBXContainerItemProxy */;
+			remoteRef = 9254D7CC1A2BD6390097FBF6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9250E20C1A29E3C4006B70D8 /* GameApplicationLayerTests.xctest */ = {
+		9254D7CF1A2BD6390097FBF6 /* GameApplicationLayerTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = GameApplicationLayerTests.xctest;
-			remoteRef = 9250E20B1A29E3C4006B70D8 /* PBXContainerItemProxy */;
+			remoteRef = 9254D7CE1A2BD6390097FBF6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -310,20 +302,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9212685E1A2B43F3007DFD1C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GameApplicationLayer;
-			targetProxy = 9212685D1A2B43F3007DFD1C /* PBXContainerItemProxy */;
-		};
-		921268631A2B440E007DFD1C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GameApplicationLayer;
-			targetProxy = 921268621A2B440E007DFD1C /* PBXContainerItemProxy */;
-		};
 		9250E1C11A29D9D7006B70D8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9250E1A91A29D9D7006B70D8 /* FakeFreeBallGame */;
 			targetProxy = 9250E1C01A29D9D7006B70D8 /* PBXContainerItemProxy */;
+		};
+		9254D7D31A2BD6880097FBF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GameApplicationLayer;
+			targetProxy = 9254D7D21A2BD6880097FBF6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>97EEF1D9-5E8B-4110-8C69-E97205501108</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FakeFreeBallGame</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4C9BD471B7AEA74E99B2363EF775ACC63BD9908C</key>
+		<string>https://github.com/davvidja/GameApplicationLayer.git</string>
+		<key>8998B89CE44717724F3A69FD17C250C6F60D0EAF</key>
+		<string>https://github.com/davvidja/FakeFreeBallGame.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FakeFreeBallGame.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4C9BD471B7AEA74E99B2363EF775ACC63BD9908C</key>
+		<string>../../../GameApplicationLayer</string>
+		<key>8998B89CE44717724F3A69FD17C250C6F60D0EAF</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/davvidja/FakeFreeBallGame.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8998B89CE44717724F3A69FD17C250C6F60D0EAF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8998B89CE44717724F3A69FD17C250C6F60D0EAF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FakeFreeBallGame</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4C9BD471B7AEA74E99B2363EF775ACC63BD9908C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>GameApplicationLayer</string>
+		</dict>
+	</array>
+</dict>
+</plist>
