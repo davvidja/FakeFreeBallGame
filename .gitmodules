@@ -1,0 +1,3 @@
+[submodule "GameApplicationLayer"]
+	path = GameApplicationLayer
+	url = https://davvidja@github.com/davvidja/GameApplicationLayer.git
