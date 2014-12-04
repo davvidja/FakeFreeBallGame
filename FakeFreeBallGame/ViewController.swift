@@ -56,10 +56,11 @@ class ViewController: UIViewController, GAServerDelegate, GAClientDelegate {
         println("startGameClient")
     }
     
-    @IBAction func sendData(){
+    @IBAction func sendNode(){
         var buffer: UInt8 = 1
-        gameServer!.sendData(&buffer, maxlength: 1)
-        println("startGameClient")
+//        gameServer!.sendData(&buffer, maxlength: 1)
+        gameServer!.sendNode()
+        println("send Node")
     }
     
     //Methods of the GAServerDelegate protocol
