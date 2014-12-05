@@ -65,7 +65,7 @@ class ViewController: UIViewController, GAServerDelegate, GAClientDelegate {
     
     //Methods of the GAServerDelegate protocol
     func player(#peerPlayer: String!, didChangeStateTo newState: GAPlayerConnectionState){
-        println("ViewController> Player \(peerPlayer) change estate to \(newState)")
+        println("ViewController> Player \(peerPlayer) change estate to \(self.stringForPeerConnectionState(newState))")
     }
     
     //Methods of the GAClientDelegate protocol
@@ -104,6 +104,18 @@ class ViewController: UIViewController, GAServerDelegate, GAClientDelegate {
         }
         if (actingAsClient!){
             gameClient!.stopGameClient()
+        }
+    }
+    
+    // Helper method for human readable printing of GAPlayerConnectionState.  This state is per peer.
+    func stringForPeerConnectionState(state: GAPlayerConnectionState)->String{
+        switch(state){
+        case GAPlayerConnectionState.GAPlayerConnectionStateConnected:
+            return "Connected";
+            
+        case GAPlayerConnectionState.GAPlayerConnectionStateNotConnected:
+            return "Not Connected";
+            
         }
     }
 }
