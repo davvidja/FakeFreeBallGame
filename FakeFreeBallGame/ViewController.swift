@@ -16,6 +16,8 @@ class ViewController: UIViewController, GAServerDelegate, GAClientDelegate {
     var actingAsClient: Bool?
     
     @IBOutlet var displayNameTextField :UITextField?
+    @IBOutlet var sceneIDTextField :UITextField?
+    @IBOutlet var nodeIDNameTextField :UITextField?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,16 +58,31 @@ class ViewController: UIViewController, GAServerDelegate, GAClientDelegate {
         println("startGameClient")
     }
     
+    @IBAction func sendScene(){
+//        gameServer!.sendNode()
+        println("ViewController> send Scene finished")
+    }
+    
     @IBAction func sendNode(){
-        var buffer: UInt8 = 1
-//        gameServer!.sendData(&buffer, maxlength: 1)
-        gameServer!.sendNode()
-        println("send Node")
+        var node = GAPNode()
+        
+        if (self.nodeIDNameTextField!.text == ""){
+            println("ViewController> Node ID blank. Fill the field")
+        } else {
+            if (self.nodeIDNameTextField!.text.toInt()!>255){
+                println("ViewController> Node ID should be <= 255")
+            } else {
+                node.nodeIdentifier = UInt8(self.nodeIDNameTextField!.text.toInt()!)
+            
+                gameServer!.sendNode(node)
+                println("ViewController> send Node finished")
+            }
+        }
     }
     
     //Methods of the GAServerDelegate protocol
     func player(#peerPlayer: String!, didChangeStateTo newState: GAPlayerConnectionState){
-        println("ViewController> Player \(peerPlayer) change estate to \(self.stringForPeerConnectionState(newState))")
+        println("ViewController> Player \(peerPlayer) change state to \(self.stringForPeerConnectionState(newState))")
     }
     
     //Methods of the GAClientDelegate protocol
