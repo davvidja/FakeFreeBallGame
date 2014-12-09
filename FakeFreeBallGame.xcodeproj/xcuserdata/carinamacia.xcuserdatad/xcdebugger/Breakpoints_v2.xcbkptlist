@@ -10,28 +10,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GameApplicationLayer/GameApplicationLayer/GASession.swift"
-            timestampString = "439476383.517517"
+            timestampString = "439817947.040296"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "stream(_:handleEvent:)"
+            startingLineNumber = "201"
+            endingLineNumber = "201"
+            landmarkName = "writeOutputStream(_:maxLength:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GameApplicationLayer/GameApplicationLayer/GAServer.swift"
-            timestampString = "439493436.557815"
+            filePath = "GameApplicationLayer/GameApplicationLayer/GACommunicationProtocol.swift"
+            timestampString = "439819057.307315"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "sendNode(_:)"
+            startingLineNumber = "243"
+            endingLineNumber = "243"
+            landmarkName = "parseMessage()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

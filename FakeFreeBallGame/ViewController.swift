@@ -59,8 +59,20 @@ class ViewController: UIViewController, GAServerDelegate, GAClientDelegate {
     }
     
     @IBAction func sendScene(){
-//        gameServer!.sendNode()
-        println("ViewController> send Scene finished")
+        var scene = GAPScene()
+        
+        if (self.sceneIDTextField!.text == ""){
+            println("ViewController> Scene ID blank. Fill the field")
+        } else {
+            if (self.sceneIDTextField!.text.toInt()!>255){
+                println("ViewController> Scene ID should be <= 255")
+            } else {
+                scene.sceneIdentifier = UInt8(self.sceneIDTextField!.text.toInt()!)
+                
+                gameServer!.sendScene(scene)
+                println("ViewController> send scene finished")
+            }
+        }
     }
     
     @IBAction func sendNode(){
