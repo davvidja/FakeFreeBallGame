@@ -102,8 +102,9 @@ class ViewController: UIViewController, GAServerDelegate, GAClientDelegate {
         println("ViewController> didReceiveScene")
     }
     
-    func didReceiveNode(){
-        println("ViewController> didReceiveNode")
+    func didReceiveNode(node: GAPNode){
+        println("ViewController> didReceiveNode with identifier \(node.nodeIdentifier)")
+        self.nodeIDNameTextField!.text = String(node.nodeIdentifier)
     }
     
     func didReceiveNodeAction(){
