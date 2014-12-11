@@ -93,6 +93,26 @@ class ViewController: UIViewController, GAServerDelegate, GAClientDelegate {
         }
     }
     
+    @IBAction func sendNodeaction(){
+        var nodeaction :GAPNodeAction
+        
+        if (self.nodeIDNameTextField!.text == ""){
+            println("ViewController> Node ID blank. Fill the field")
+        } else {
+            if (self.nodeIDNameTextField!.text.toInt()!>255){
+                println("ViewController> Node ID should be <= 255")
+            } else {
+                nodeaction = GAPNodeAction()
+                
+                nodeaction.nodeIdentifier = UInt8(self.nodeIDNameTextField!.text.toInt()!)
+                
+                gameServer!.sendNodeAction(nodeaction)
+                
+                println("ViewController> send Nodeaction finished")
+            }
+        }
+    }
+    
 
     
     //Methods of the GAServerDelegate protocol
