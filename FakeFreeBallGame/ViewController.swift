@@ -87,10 +87,13 @@ class ViewController: UIViewController, GAServerDelegate, GAClientDelegate {
                 node.nodeIdentifier = UInt8(self.nodeIDNameTextField!.text.toInt()!)
             
                 gameServer!.sendNode(node)
+                
                 println("ViewController> send Node finished")
             }
         }
     }
+    
+
     
     //Methods of the GAServerDelegate protocol
     func player(#peerPlayer: String!, didChangeStateTo newState: GAPlayerConnectionState){
@@ -98,10 +101,11 @@ class ViewController: UIViewController, GAServerDelegate, GAClientDelegate {
     }
     
     //Methods of the GAClientDelegate protocol
-    func didReceiveScene(){
-        println("ViewController> didReceiveScene")
+    func didReceiveScene(scene: GAPScene){
+        println("ViewController> didReceiveScene with identifier \(scene.sceneIdentifier)")
+        self.sceneIDTextField!.text = String(scene.sceneIdentifier)
     }
-    
+     
     func didReceiveNode(node: GAPNode){
         println("ViewController> didReceiveNode with identifier \(node.nodeIdentifier)")
         self.nodeIDNameTextField!.text = String(node.nodeIdentifier)
