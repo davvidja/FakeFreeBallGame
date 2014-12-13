@@ -3,7 +3,13 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "GameApplicationLayer.GACommunicationProtocol.receiveData (GameApplicationLayer.GACommunicationProtocol)() -&gt; (Swift.UnsafeMutablePointer&lt;Swift.UInt8&gt;, Swift.Int, (Swift.Int) -&gt; ()):GACommunicationProtocol.swift">
+         contextName = "GameApplicationLayer.GAServer.sendNodeAction (GameApplicationLayer.GAServer)(GameApplicationLayer.GAPNodeAction) -&gt; ():GAServer.swift">
+      </ContextState>
+      <ContextState
+         contextName = "GameApplicationLayer.GACommunicationProtocol.prepareForGAPNodePayloadReception (GameApplicationLayer.GACommunicationProtocol)() -&gt; ():GACommunicationProtocol.swift">
+      </ContextState>
+      <ContextState
+         contextName = "FakeFreeBallGame.ViewController.sendNodeaction (FakeFreeBallGame.ViewController)() -&gt; ():ViewController.swift">
       </ContextState>
       <ContextState
          contextName = "GameApplicationLayer.GACommunicationProtocol.parseGAPHeader (GameApplicationLayer.GACommunicationProtocol)() -&gt; ():GACommunicationProtocol.swift">
@@ -14,7 +20,24 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "GameApplicationLayer.GACommunicationProtocol.prepareForGAPNodePayloadReception (GameApplicationLayer.GACommunicationProtocol)() -&gt; ():GACommunicationProtocol.swift">
+         contextName = "GameApplicationLayer.GASession.writeOutputStream (GameApplicationLayer.GASession)(Swift.UnsafePointer&lt;Swift.UInt8&gt;, maxLength : Swift.Int) -&gt; Swift.Bool:GASession.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "buffer.memory">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GameApplicationLayer.GACommunicationProtocol.prepareForGAPScenePayloadReception (GameApplicationLayer.GACommunicationProtocol)() -&gt; ():GACommunicationProtocol.swift">
+      </ContextState>
+      <ContextState
+         contextName = "FakeFreeBallGame.ViewController.didReceiveNodeAction (FakeFreeBallGame.ViewController)(GameApplicationLayer.GAPNodeAction) -&gt; ():ViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "GameApplicationLayer.GACommunicationProtocol.sendNodeAction (GameApplicationLayer.GACommunicationProtocol)(GameApplicationLayer.GAPNodeAction) -&gt; (Swift.UnsafePointer&lt;Swift.UInt8&gt;, Swift.Int):GACommunicationProtocol.swift">
+      </ContextState>
+      <ContextState
+         contextName = "GameApplicationLayer.GACommunicationProtocol.receiveData (GameApplicationLayer.GACommunicationProtocol)() -&gt; (Swift.UnsafeMutablePointer&lt;Swift.UInt8&gt;, Swift.Int, (Swift.Int) -&gt; ()):GACommunicationProtocol.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

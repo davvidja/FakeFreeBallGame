@@ -9,7 +9,7 @@
 import UIKit
 import GameApplicationLayer
 
-class ViewController: UIViewController, GAServerDelegate, GAClientDelegate {
+class ViewController: UIViewController {
     var gameServer : GAServer?
     var gameClient: GAClient?
     var actingAsServer: Bool?
@@ -18,6 +18,11 @@ class ViewController: UIViewController, GAServerDelegate, GAClientDelegate {
     @IBOutlet var displayNameTextField :UITextField?
     @IBOutlet var sceneIDTextField :UITextField?
     @IBOutlet var nodeIDNameTextField :UITextField?
+    
+    @IBOutlet var positionCoordinates: Array<UITextField>?
+    @IBOutlet var directionCoordinates: Array<UITextField>?
+    
+    @IBOutlet var speed: UITextField?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,7 +109,14 @@ class ViewController: UIViewController, GAServerDelegate, GAClientDelegate {
             } else {
                 nodeaction = GAPNodeAction()
                 
-                nodeaction.nodeIdentifier = UInt8(self.nodeIDNameTextField!.text.toInt()!)
+                nodeaction.nodeIdentifier = UInt16(self.nodeIDNameTextField!.text.toInt()!)
+                
+                nodeaction.startPoint = ScenePoint(coordinates: map(positionCoordinates!, positionCoordinatesToInt16))
+                                
+                nodeaction.direction = Vector3D(vectorComponents: map(directionCoordinates!, positionCoordinatesToInt16))
+                
+                nodeaction.speed = NSString(string: speed!.text).floatValue
+                
                 
                 gameServer!.sendNodeAction(nodeaction)
                 
@@ -113,30 +125,8 @@ class ViewController: UIViewController, GAServerDelegate, GAClientDelegate {
         }
     }
     
-
-    
-    //Methods of the GAServerDelegate protocol
-    func player(#peerPlayer: String!, didChangeStateTo newState: GAPlayerConnectionState){
-        println("ViewController> Player \(peerPlayer) change state to \(self.stringForPeerConnectionState(newState))")
-    }
-    
-    //Methods of the GAClientDelegate protocol
-    func didReceiveScene(scene: GAPScene){
-        println("ViewController> didReceiveScene with identifier \(scene.sceneIdentifier)")
-        self.sceneIDTextField!.text = String(scene.sceneIdentifier)
-    }
-     
-    func didReceiveNode(node: GAPNode){
-        println("ViewController> didReceiveNode with identifier \(node.nodeIdentifier)")
-        self.nodeIDNameTextField!.text = String(node.nodeIdentifier)
-    }
-    
-    func didReceiveNodeAction(){
-        println("ViewController> didReceiveNodeAction")
-    }
-    
-    func didReceiveGamePause(){
-        println("ViewController> didReceiveGamePause")
+    func positionCoordinatesToInt16(textFieldCoordinate: UITextField) ->Int16{
+        return Int16(textFieldCoordinate.text.toInt()!)
     }
     
     
@@ -171,6 +161,57 @@ class ViewController: UIViewController, GAServerDelegate, GAClientDelegate {
             return "Not Connected";
             
         }
+    }
+}
+
+extension ViewController: GAClientDelegate{
+    func didReceiveScene(scene: GAPScene){
+        println("ViewController> didReceiveScene with identifier \(scene.sceneIdentifier)")
+        self.sceneIDTextField!.text = String(scene.sceneIdentifier)
+    }
+    
+    func didReceiveNode(node: GAPNode){
+        println("ViewController> didReceiveNode with identifier \(node.nodeIdentifier)")
+        self.nodeIDNameTextField!.text = String(node.nodeIdentifier)
+    }
+    
+    func didReceiveNodeAction(nodeaction: GAPNodeAction){
+        println("ViewController> didReceiveNodeAction")
+        self.nodeIDNameTextField!.text = String(nodeaction.nodeIdentifier)
+        
+//        self.positionCoordinates![0].text = map(nodeaction.startPoint.getCoordinates()[0] , positionCoordinatesToString)
+//        self.positionCoordinates![1].text = map(nodeaction.startPoint.getCoordinates()[1] , positionCoordinatesToString)
+//        self.positionCoordinates![2].text = map(nodeaction.startPoint.getCoordinates()[2] , positionCoordinatesToString)
+        self.positionCoordinates![0].text = String(nodeaction.startPoint.getCoordinates()[0])
+        self.positionCoordinates![1].text = String(nodeaction.startPoint.getCoordinates()[1])
+        self.positionCoordinates![2].text = String(nodeaction.startPoint.getCoordinates()[2])
+        
+        self.directionCoordinates![0].text = String(nodeaction.direction.getVectorComponents()[0])
+        self.directionCoordinates![1].text = String(nodeaction.direction.getVectorComponents()[1])
+        self.directionCoordinates![2].text = String(nodeaction.direction.getVectorComponents()[2])
+        
+        let nf = NSNumberFormatter()
+        nf.numberStyle = .DecimalStyle
+        // Configure the number formatter to your liking
+        self.speed!.text = nf.stringFromNumber(nodeaction.speed)
+        
+        
+    }
+    
+    func positionCoordinatesToString(int16Coordinate: Int16) ->String{
+        return String(int16Coordinate)
+    }
+    
+    
+    
+    func didReceiveGamePause(){
+        println("ViewController> didReceiveGamePause")
+    }
+}
+
+extension ViewController: GAServerDelegate{
+    func player(#peerPlayer: String!, didChangeStateTo newState: GAPlayerConnectionState){
+        println("ViewController> Player \(peerPlayer) change state to \(self.stringForPeerConnectionState(newState))")
     }
 }
 
