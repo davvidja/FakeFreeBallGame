@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     @IBOutlet var directionCoordinates: Array<UITextField>?
     
     @IBOutlet var speed: UITextField?
+    
+    @IBOutlet var primtiveReceived: UITextField?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -130,6 +132,13 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func sendPause(){
+                gameServer!.sendGamePause()
+                println("ViewController> send pause finished")
+    }
+
+    
+    
     //
     func applicationDidEnterBackground(){
         println("ViewController>: application did enter in Background")
@@ -167,16 +176,25 @@ class ViewController: UIViewController {
 extension ViewController: GAClientDelegate{
     func didReceiveScene(scene: GAPScene){
         println("ViewController> didReceiveScene with identifier \(scene.sceneIdentifier)")
+        
+        self.primtiveReceived!.text = "SCENE"
+        
         self.sceneIDTextField!.text = String(scene.sceneIdentifier)
     }
     
     func didReceiveNode(node: GAPNode){
         println("ViewController> didReceiveNode with identifier \(node.nodeIdentifier)")
+
+        self.primtiveReceived!.text = "NODE"
+        
         self.nodeIDNameTextField!.text = String(node.nodeIdentifier)
     }
     
     func didReceiveNodeAction(nodeaction: GAPNodeAction){
         println("ViewController> didReceiveNodeAction")
+        
+        self.primtiveReceived!.text = "NODEACTION"
+        
         self.nodeIDNameTextField!.text = String(nodeaction.nodeIdentifier)
         
 //        self.positionCoordinates![0].text = map(nodeaction.startPoint.getCoordinates()[0] , positionCoordinatesToString)
@@ -206,6 +224,8 @@ extension ViewController: GAClientDelegate{
     
     func didReceiveGamePause(){
         println("ViewController> didReceiveGamePause")
+        
+        self.primtiveReceived!.text = "PAUSE"
     }
 }
 

@@ -80,71 +80,71 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scene Id" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYR-XF-DzM">
-                                <rect key="frame" x="83" y="166" width="50" height="21"/>
+                                <rect key="frame" x="29" y="226" width="50" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WSw-0Z-Jj5">
-                                <rect key="frame" x="141" y="162" width="97" height="30"/>
+                                <rect key="frame" x="141" y="225" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Node Id" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acm-Sv-MTV">
-                                <rect key="frame" x="83" y="204" width="50" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PRIMITIVE RECEIVED" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a9F-Vd-gEd">
+                                <rect key="frame" x="64" y="181" width="193" height="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Position" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uo6-TR-EZA">
-                                <rect key="frame" x="77" y="253" width="50" height="21"/>
+                                <rect key="frame" x="29" y="315" width="50" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bdY-FI-5N3">
-                                <rect key="frame" x="141" y="200" width="97" height="30"/>
+                                <rect key="frame" x="141" y="263" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="X" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="g4r-m6-9tE">
-                                <rect key="frame" x="137" y="249" width="37" height="30"/>
+                                <rect key="frame" x="137" y="312" width="37" height="30"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Y" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="C2U-2o-c6h">
-                                <rect key="frame" x="182" y="249" width="37" height="30"/>
+                                <rect key="frame" x="182" y="312" width="37" height="30"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Z" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ZoF-rD-6Fq">
-                                <rect key="frame" x="227" y="249" width="37" height="30"/>
+                                <rect key="frame" x="227" y="312" width="37" height="30"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Direction" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMR-dH-BdP">
-                                <rect key="frame" x="77" y="291" width="50" height="21"/>
+                                <rect key="frame" x="29" y="353" width="50" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="dX" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="XCH-3F-R2k">
-                                <rect key="frame" x="137" y="287" width="37" height="30"/>
+                                <rect key="frame" x="137" y="350" width="37" height="30"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="dY" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="wbq-AH-ri2">
-                                <rect key="frame" x="182" y="287" width="37" height="30"/>
+                                <rect key="frame" x="182" y="350" width="37" height="30"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="dZ" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="C3e-Dl-n2l">
-                                <rect key="frame" x="227" y="287" width="37" height="30"/>
+                                <rect key="frame" x="227" y="350" width="37" height="30"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBr-dF-PZ7">
-                                <rect key="frame" x="16" y="376" width="73" height="30"/>
+                                <rect key="frame" x="16" y="439" width="73" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="send scene">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -154,7 +154,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZj-9W-Ldd">
-                                <rect key="frame" x="16" y="404" width="73" height="30"/>
+                                <rect key="frame" x="16" y="467" width="73" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="send node">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -164,7 +164,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4T-Fw-cYi">
-                                <rect key="frame" x="16" y="434" width="97" height="30"/>
+                                <rect key="frame" x="16" y="497" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="send node action">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -174,16 +174,32 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Speed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4n1-JA-RAB">
-                                <rect key="frame" x="78" y="330" width="50" height="21"/>
+                                <rect key="frame" x="30" y="392" width="50" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nVn-XR-uEx">
-                                <rect key="frame" x="136" y="326" width="97" height="30"/>
+                                <rect key="frame" x="136" y="389" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Node Id" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acm-Sv-MTV">
+                                <rect key="frame" x="29" y="267" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJl-Fo-Cn0">
+                                <rect key="frame" x="16" y="523" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="send pause">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendPause" destination="BYZ-38-t0r" eventType="touchDown" id="TcK-8x-5Qg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -192,14 +208,15 @@
                     <connections>
                         <outlet property="displayNameTextField" destination="IWK-tf-NcJ" id="65j-Zc-q2t"/>
                         <outlet property="nodeIDNameTextField" destination="bdY-FI-5N3" id="0yG-gc-V4L"/>
+                        <outlet property="primtiveReceived" destination="a9F-Vd-gEd" id="U2N-eX-3Qp"/>
                         <outlet property="sceneIDTextField" destination="WSw-0Z-Jj5" id="jqz-xP-IQh"/>
                         <outlet property="speed" destination="nVn-XR-uEx" id="YCi-TU-LmS"/>
-                        <outletCollection property="positionCoordinates" destination="g4r-m6-9tE" id="lkD-Uz-GE2"/>
-                        <outletCollection property="positionCoordinates" destination="C2U-2o-c6h" id="sNp-vl-MiC"/>
-                        <outletCollection property="positionCoordinates" destination="ZoF-rD-6Fq" id="paT-zT-lXd"/>
-                        <outletCollection property="directionCoordinates" destination="XCH-3F-R2k" id="YB6-9M-Kuq"/>
-                        <outletCollection property="directionCoordinates" destination="wbq-AH-ri2" id="0J4-yQ-ZRS"/>
-                        <outletCollection property="directionCoordinates" destination="C3e-Dl-n2l" id="C2H-lk-sJy"/>
+                        <outletCollection property="positionCoordinates" destination="g4r-m6-9tE" collectionClass="NSMutableArray" id="lkD-Uz-GE2"/>
+                        <outletCollection property="positionCoordinates" destination="C2U-2o-c6h" collectionClass="NSMutableArray" id="sNp-vl-MiC"/>
+                        <outletCollection property="positionCoordinates" destination="ZoF-rD-6Fq" collectionClass="NSMutableArray" id="paT-zT-lXd"/>
+                        <outletCollection property="directionCoordinates" destination="XCH-3F-R2k" collectionClass="NSMutableArray" id="YB6-9M-Kuq"/>
+                        <outletCollection property="directionCoordinates" destination="wbq-AH-ri2" collectionClass="NSMutableArray" id="0J4-yQ-ZRS"/>
+                        <outletCollection property="directionCoordinates" destination="C3e-Dl-n2l" collectionClass="NSMutableArray" id="C2H-lk-sJy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
