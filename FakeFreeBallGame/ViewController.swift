@@ -10,8 +10,12 @@ import UIKit
 import GameApplicationLayer
 
 class ViewController: UIViewController {
+    var gaLayer: GALayer?
     var gameServer : GAServer?
     var gameClient: GAClient?
+    var dataRx: GADataRx?
+    var dataTx: GADataTx?
+    
     var actingAsServer: Bool?
     var actingAsClient: Bool?
     
@@ -28,11 +32,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        gameServer = GAServer ()
-        gameServer!.delegate = self
-        
-        gameClient = GAClient ()
-        gameClient!.delegate = self
+//        gameServer = GAServer ()
+//        gameServer!.delegate = self
+//        
+//        gameClient = GAClient ()
+//        gameClient!.delegate = self
+ 
+        gaLayer = GALayer(rxDelegate: self, sessionConnectionDelegate: self)
         
         actingAsClient = false
         actingAsServer = false
@@ -44,7 +50,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func initGameServer(){
-        gameServer!.initGameServer(self.displayNameTextField!.text)
+        (gameServer,dataRx,dataTx) = gaLayer!.initGameServer(self.displayNameTextField!.text)
         println("initGameServer")
     }
 
@@ -55,7 +61,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func initGameClient(){
-        gameClient!.initGameClient(self.displayNameTextField!.text)
+        (gameClient,dataRx,dataTx) = gaLayer!.initGameClient(self.displayNameTextField!.text)
         actingAsClient = true
         println("initGameClient")
     }
@@ -76,7 +82,7 @@ class ViewController: UIViewController {
             } else {
                 scene.sceneIdentifier = UInt8(self.sceneIDTextField!.text.toInt()!)
                 
-                gameServer!.sendScene(scene)
+                dataTx!.sendScene(scene)
                 println("ViewController> send scene finished")
             }
         }
@@ -93,7 +99,7 @@ class ViewController: UIViewController {
             } else {
                 node.nodeIdentifier = UInt8(self.nodeIDNameTextField!.text.toInt()!)
             
-                gameServer!.sendNode(node)
+                dataTx!.sendNode(node)
                 
                 println("ViewController> send Node finished")
             }
@@ -120,7 +126,7 @@ class ViewController: UIViewController {
                 nodeaction.speed = NSString(string: speed!.text).floatValue
                 
                 
-                gameServer!.sendNodeAction(nodeaction)
+                dataTx!.sendNodeAction(nodeaction)
                 
                 println("ViewController> send Nodeaction finished")
             }
@@ -133,7 +139,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func sendPause(){
-                gameServer!.sendGamePause()
+                dataTx!.sendGamePause()
                 println("ViewController> send pause finished")
     }
 
@@ -173,7 +179,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: GAClientDelegate{
+extension ViewController: GADataRxDelegate{
     func didReceiveScene(scene: GAPScene){
         println("ViewController> didReceiveScene with identifier \(scene.sceneIdentifier)")
         
@@ -229,7 +235,7 @@ extension ViewController: GAClientDelegate{
     }
 }
 
-extension ViewController: GAServerDelegate{
+extension ViewController: GASessionConnectionDelegate{
     func player(#peerPlayer: String!, didChangeStateTo newState: GAPlayerConnectionState){
         println("ViewController> Player \(peerPlayer) change state to \(self.stringForPeerConnectionState(newState))")
     }
